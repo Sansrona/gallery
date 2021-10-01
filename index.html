@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <title>Document</title>
+    <script src="https://kit.fontawesome.com/2c7fc28a2f.js"></script>
+</head>
+
+<body>
+    <header class='header'>
+        <h1>Лого</h1>
+        <ul class='menu'>
+            <li><a href="#watch">Смотреть</a></li>
+            <li><a href="#delete">Удалить</a></li>
+            <li><a href="#add">Добавить</a></li>
+        </ul>
+    </header>
+    <div class="content">
+        <div class="watch__gallery" id="watch">
+            <div class="images">
+                <button id="navLeft" class="navBtns">
+                    <i class="fas fa-arrow-left fa-3x"></i>
+                </button>
+                <div id="mainView"></div>
+                <button id="navRight" class="navBtns">
+                    <i class="fas fa-arrow-right fa-3x"></i>
+                </button>
+            </div>
+        </div>
+        <div class="delete__gallery" id="delete">
+            <ul id="delete__list">
+            </ul>
+            <button id='delete__here'>
+                <svg id="Layer_1" enable-background="new 0 0 512 512" height="300" viewBox="0 0 512 512" width="300"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path
+                        d="m424 64h-88v-16c0-26.467-21.533-48-48-48h-64c-26.467 0-48 21.533-48 48v16h-88c-22.056 0-40 17.944-40 40v56c0 8.836 7.164 16 16 16h8.744l13.823 290.283c1.221 25.636 22.281 45.717 47.945 45.717h242.976c25.665 0 46.725-20.081 47.945-45.717l13.823-290.283h8.744c8.836 0 16-7.164 16-16v-56c0-22.056-17.944-40-40-40zm-216-16c0-8.822 7.178-16 16-16h64c8.822 0 16 7.178 16 16v16h-96zm-128 56c0-4.411 3.589-8 8-8h336c4.411 0 8 3.589 8 8v40c-4.931 0-331.567 0-352 0zm313.469 360.761c-.407 8.545-7.427 15.239-15.981 15.239h-242.976c-8.555 0-15.575-6.694-15.981-15.239l-13.751-288.761h302.44z" />
+                    <path
+                        d="m256 448c8.836 0 16-7.164 16-16v-208c0-8.836-7.164-16-16-16s-16 7.164-16 16v208c0 8.836 7.163 16 16 16z" />
+                    <path
+                        d="m336 448c8.836 0 16-7.164 16-16v-208c0-8.836-7.164-16-16-16s-16 7.164-16 16v208c0 8.836 7.163 16 16 16z" />
+                    <path
+                        d="m176 448c8.836 0 16-7.164 16-16v-208c0-8.836-7.164-16-16-16s-16 7.164-16 16v208c0 8.836 7.163 16 16 16z" />
+                </svg>
+            </button>
+        </div>
+        <div class="add__image" id='add'>
+            <label id='label-name' for="new_image">Выберите файл</label>
+            <input type="file" accept="image/png, image/webp" name="file" id="new_image" multiple
+                onchange="addImage(this)">
+            <input type="text" id="new_image-text" placeholder="Введите название картинки" />
+            <input type="submit" value="Загрузить" id="upload_image" />
+        </div>
+        <div class="popup" id='popup'>
+            <div class="popup-content">
+                <i class="fa fa-times" id='close__popup' aria-hidden="true"></i>
+                <p>Нельзя загружать такой файл</p>
+            </div>
+        </div>
+    </div>
+    <footer class="footer">
+        <h1>Лого</h1>
+        <p class="current_year"></p>
+    </footer>
+
+    <script src="./main.js"></script>
+</body>
+
+</html>
